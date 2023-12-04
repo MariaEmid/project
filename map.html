@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<style>
+ body {
+  background-image: url('grey.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 55%;
+}
+</style> 
+
+<body>
+
+<img src="castles_map_edited.jpg" alt="Map" usemap="#workmap" class="center" name="castles">
+
+<map name="workmap">
+  <area shape="rect" coords="152,287,233,330" alt="Lida castle" href="lidski.html" 
+onMouseOver="document.castles.src='castles1.jpg'" onMouseOut="document.castles.src='castles_map_edited.jpg'">
+  <area shape="rect" coords="307,311,390,350" alt="Mir castle" href="mirski.html"  
+onMouseOver="document.castles.src='castles2.jpg'" onMouseOut="document.castles.src='castles_map_edited.jpg'">
+  <area shape="rect" coords="266,187,333,240" alt="Krevo castle" href="krevski.html"  
+onMouseOver="document.castles.src='castles3.jpg'" onMouseOut="document.castles.src='castles_map_edited.jpg'">
+  <area shape="rect" coords="209,235,263,275" alt="Golshany castle" href="golshanski.html"  
+onMouseOver="document.castles.src='castles4.jpg'" onMouseOut="document.castles.src='castles_map_edited.jpg'">
+</map>
+
+<script>
+function printMousePos(event) {
+  document.getElementById('test').innerHTML = 
+    "clientX: " + event.clientX +
+    " - clientY: " + event.clientY;
+}
+
+document.addEventListener("click", printMousePos);
+
+
+</script>
+
+</body>
+</html>
